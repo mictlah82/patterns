@@ -1,5 +1,5 @@
 import SizeDecorator from './SizeDecorator';
-import Beverage from '../Beverage';
+import { Beverage } from '../Beverage';
 
 class LargeSize extends SizeDecorator {
   private beverage: Beverage;

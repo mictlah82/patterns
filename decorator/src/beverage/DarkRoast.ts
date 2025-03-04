@@ -1,13 +1,23 @@
-import Beverage from "./Beverage";
+import { Beverage, Size } from "./Beverage";
 
 class DarkRoast extends Beverage {
-  constructor() {
+  constructor(size: Size) {
     super();
-    this.description = 'Dark Roast Coffee';
+    this.size = size;
+    this.description = 'Dark Roast Coffee ' + this.getSize();
   }
 
   cost() {
-    return 0.99;
+    switch (this.getSize()) {
+      case 'TALL':
+        return 1.89;
+      case 'GRANDE':
+        return 2.39;
+      case 'VENTI':
+        return 2.89;
+      default:
+        return 1.89;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 import CondimentDecorator from './CondimentDecorator';
-import Beverage from '../Beverage';
+import { Beverage } from '../Beverage';
 
 class Whip extends CondimentDecorator {
   beverage: Beverage;

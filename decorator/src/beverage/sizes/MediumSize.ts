@@ -1,4 +1,4 @@
-import Beverage from "../Beverage";
+import { Beverage } from "../Beverage";
 import SizeDecorator from "./SizeDecorator";
 
 class MediumSize extends SizeDecorator {

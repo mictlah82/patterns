@@ -84,7 +84,7 @@ Description and example of Mediator pattern.
 Description and example of Memento pattern.
 
 ### Observer
-Description and example of Observer pattern.
+Description and example of Observer pattern. For more details, refer to the [Decorator Pattern Readme](./observer/Readme.md).
 
 ### State
 Description and example of State pattern.

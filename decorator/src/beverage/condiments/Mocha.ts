@@ -1,4 +1,4 @@
-import Beverage from "../Beverage";
+import { Beverage } from "../Beverage";
 import CondimentDecorator from "./CondimentDecorator";
 
 class Mocha extends CondimentDecorator {

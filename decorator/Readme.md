@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates the application of the Decorator Pattern in JavaScript. The Decorator Pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
+The Decorator Pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
 
 ## Project Information
 

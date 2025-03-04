@@ -1,5 +1,5 @@
 import CondimentDecorator from './CondimentDecorator';
-import Beverage from '../Beverage';
+import { Beverage } from '../Beverage';
 
 class Milk extends CondimentDecorator {
   beverage: Beverage;

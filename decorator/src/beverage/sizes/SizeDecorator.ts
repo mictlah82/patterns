@@ -1,4 +1,4 @@
-import Beverage from "../Beverage";
+import { Beverage } from "../Beverage";
 
 abstract class SizeDecorator extends Beverage {
   public abstract getDescription(): string;
