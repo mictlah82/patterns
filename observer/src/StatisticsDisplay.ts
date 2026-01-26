@@ -1,4 +1,6 @@
-import { DisplayElement, Observer, Subject } from "./WeatherData";
+import { DisplayElement } from "./interfaces/DisplayElement";
+import { Observer } from "./interfaces/Observer";
+import { Subject } from "./interfaces/Subject";
 
 class StatisticsDisplay implements Observer, DisplayElement {
   private maxTemp = 0.0;

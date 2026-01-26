@@ -1,16 +1,5 @@
-interface Observer {
-  update(temp: number, humidity: number, pressure: number): void;
-}
-
-interface Subject {
-  registerObserver(o: Observer): void;
-  removeObserver(o: Observer): void;
-  notifyObservers(): void;
-}
-
-interface DisplayElement {
-  display(): void;
-}
+import { Observer } from "./interfaces/Observer";
+import { Subject } from "./interfaces/Subject";
 
 class WeatherData implements Subject {
   private observers: Observer[] = [];
@@ -47,4 +36,4 @@ class WeatherData implements Subject {
   }
 }
 
-export { WeatherData, Observer, Subject, DisplayElement };
+export { WeatherData };

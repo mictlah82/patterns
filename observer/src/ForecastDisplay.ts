@@ -1,7 +1,9 @@
-import { DisplayElement, Observer, Subject } from "./WeatherData";
+import { DisplayElement } from "./interfaces/DisplayElement";
+import { Observer } from "./interfaces/Observer";
+import { Subject } from "./interfaces/Subject";
 
 class ForecastDisplay implements Observer, DisplayElement {
-  private currentPressure = 29.92;
+  private currentPressure = 0;
   private lastPressure: number = 0;
   private weatherData: Subject;
 
@@ -13,7 +15,6 @@ class ForecastDisplay implements Observer, DisplayElement {
   update(temp: number, humidity: number, pressure: number): void {
     this.lastPressure = this.currentPressure;
     this.currentPressure = pressure;
-
     this.display();
   }
 
