@@ -1,23 +1,23 @@
-import { Beverage, Size } from './Beverage';
+import { Beverage, SizeType } from './Beverage';
 
 class American extends Beverage {
-  constructor(size: Size) {
+  constructor(size: SizeType) {
     super();
     this.size = size;
     this.description = 'American ' + this.getSize();
   }
 
   cost(): number {
+    let cost=0;
     switch (this.getSize()) {
-      case 'TALL':
-        return 1.99;
-      case 'GRANDE':
-        return 2.49;
-      case 'VENTI':
-        return 2.99;
-      default:
-        return 1.99;
+      case 'small':
+        cost = 1.99;
+      case 'medium':
+        cost = 1.09;
+      case 'large':
+        cost = 1.19;
     }
+    return cost;
   }
 }
 

@@ -1,23 +1,23 @@
-import { Beverage, Size } from "./Beverage";
+import { Beverage, SizeType } from "./Beverage";
 
 class Decaf extends Beverage {
-  constructor(size: Size) {
+  constructor(size: SizeType) {
     super();
     this.size = size;
     this.description = 'Decaf ' + this.getSize();
   }
 
-  cost(): number {
+  public cost(): number {
+    let cost = 0;
     switch (this.getSize()) {
-      case 'TALL':
-        return 1.95;
-      case 'GRANDE':
-        return 2.45;
-      case 'VENTI':
-        return 2.95;
-      default:
-        return 1.95;
+      case 'small':
+        cost = 0.95;
+      case 'medium':
+        cost = 1.05;
+      case 'large':
+        cost = 1.15;
     }
+    return cost;
   }
 }
 export default Decaf;

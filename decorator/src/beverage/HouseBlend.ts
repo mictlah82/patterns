@@ -1,23 +1,23 @@
-import { Beverage, Size } from "./Beverage";
+import { Beverage, SizeType } from "./Beverage";
 
 class HouseBlend extends Beverage {
-  constructor(size: Size) {
+  constructor(size: SizeType) {
     super();
     this.size = size;
     this.description = 'House Blend Coffee ' + this.getSize();
   }
 
   public cost(): number {
+    let cost = 0;
     switch (this.getSize()) {
-      case 'TALL':
-        return 0.99;
-      case 'GRANDE':
-        return 0.49;
-      case 'VENTI':
-        return 1.19;
-      default:
-        return 0.99;
+      case 'small':
+        cost = 0.99;
+      case 'medium':
+        cost = 1.09;
+      case 'large':
+        cost = 1.19;
     }
+    return cost;
 
   }
 }

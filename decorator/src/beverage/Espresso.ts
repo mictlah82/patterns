@@ -1,23 +1,23 @@
-import { Beverage, Size } from "./Beverage";
+import { Beverage, SizeType } from "./Beverage";
 
 class Espresso extends Beverage {
-  constructor(size: Size) {
+  constructor(size: SizeType) {
     super();
     this.size = size;
     this.description = 'Expresso ' + this.getSize();
   }
 
   public cost(): number {
+    let  cost = 0;
     switch (this.getSize()) {
-      case 'TALL':
-        return 1.91;
-      case 'GRANDE':
-        return 2.41;
-      case 'VENTI':
-        return 2.91;
-      default:
-        return 1.91;
+      case 'small':
+        cost = 0.91;
+      case 'medium':
+        cost = 1.01;
+      case 'large':
+        cost = 1.11;
     }
+    return cost;
   }
 }
 export default Espresso;

@@ -14,7 +14,13 @@ class Mocha extends CondimentDecorator {
   }
 
   public cost(): number {
-    return .20 + this.beverage.cost();
+    let cost = 0;
+    switch(this.beverage.getSize()){
+      case "small": cost = 0.20; break;
+      case "medium": cost = 0.25; break;
+      case "large": cost = 0.30;
+    }    
+    return cost + this.beverage.cost();
   }
 }
 export default Mocha;
