@@ -1,16 +1,14 @@
 class Light {
-    private description: string | undefined;
-
-    Light(description: string) {
-        this.description = description;
-    }
+    constructor(
+        private description:string
+    ) {}
 
     public on() {
-        console.log(`Light ${this.description} on.`);
+        console.log(`${this.description} Light on.`);
     }
 
     public off() {
-        console.log(`Light ${this.description} off.`);
+        console.log(`${this.description} Light off.`);
     }
 
 }

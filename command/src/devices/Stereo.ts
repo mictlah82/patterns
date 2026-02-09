@@ -1,26 +1,29 @@
+const limVolume: [min:number, max:number]= [0,10]
 class Stereo {
-    private description: string | undefined;
-    private volume: number = 0;
-    private tittleCd: string | undefined;
-
-    Stereo(description: string){
-        this.description = description;
-    }
+    private volume:number = 5;
+    constructor(){}
 
     public on(){
-        console.log(`Stereo ${this.description} on.`);
+        console.log(`Stereo on.`);
     }
 
     public off(){
-        console.log(`Stereo ${this.description} off.`);
+        console.log(`Stereo off.`);
     }
 
     public setCD(tittle: string){
-        this.tittleCd = tittle;
+
     }
 
-    public setVolume (volume: number){
-        this.volume = volume;
+    public volumeUp():void{
+        if (this.volume <= limVolume[1]){
+            this.volume++;
+        }
+    }
+    public volumeDown():void{
+        if (this.volume >= limVolume[0]){
+            this.volume--;
+        }
     }
 }
 

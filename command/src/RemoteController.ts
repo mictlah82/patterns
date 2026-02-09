@@ -1,16 +1,15 @@
 import NoCommand from "./commandDevice/NoCommand";
 import { Command } from "./interfaces/Command";
 
+const sizeSlot = 7;
 class RemoteController {
-  private onCommands: Array<Command> = new Array(7);
-  private offCommands: Array<Command> = new Array(7);
 
-  RemoteController(){
-    for(let i=0; i < 7; i++){
-      this.onCommands[i]= new NoCommand();
-      this.offCommands[i]= new NoCommand();
-    }
-  }
+  constructor(
+    private noCommand: NoCommand,
+    private onCommands: Array<Command> = new Array(sizeSlot).fill(noCommand),
+    private offCommands: Array<Command> = new Array(sizeSlot).fill(noCommand),
+    private lastCommand = noCommand,
+  ){}
   
   public setCommand(slot: number, onCommand: Command, offCommand: Command){
     this.onCommands[slot] = onCommand;
@@ -18,11 +17,25 @@ class RemoteController {
   }
 
   public onButtonWasPushed(slot: number){
-    this.onCommands[slot].execute();
+    if (slot >= 0 && slot < sizeSlot ){
+      this.onCommands[slot].execute();
+      this.lastCommand = this.onCommands[slot];
+    } else {
+      throw new Error('Slot not allowed.');
+    }
   }
 
   public offButtonWasPushed(slot: number){
-    this.offCommands[slot].execute();
+    if (slot >=0 && slot < sizeSlot){
+      this.offCommands[slot].execute();
+      this.lastCommand = this.offCommands[slot];
+    } else {
+      throw new Error('Slot not allowed.');
+    }
+  }
+
+  public undoButtonWasPushed(){
+    this.lastCommand.undo();
   }
 
   public toString(){
@@ -31,3 +44,5 @@ class RemoteController {
     }
   }
 }
+
+export {RemoteController};

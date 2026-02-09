@@ -1,14 +1,20 @@
 import GarageDoor from "../devices/GarageDoor";
+import Light from "../devices/Light";
 import { Command } from "../interfaces/Command";
 
 class GarageDoorOnCommand implements Command {
-  private garageDoor!: GarageDoor;
+  constructor(
+    private garageDoor: GarageDoor,
+    private light: Light,
+  ){}
 
-  GarageDorrOnCommand(garageDoor: GarageDoor){
-    this.garageDoor = garageDoor;
+  public execute(): void {
+    this.garageDoor.open();
+    this.light.on();
   }
-
-  execute(): void {
-    this.garageDoor.on();
+  public undo(){
+    this.light.off();
+    this.garageDoor.close();
   }
 }
+export {GarageDoorOnCommand}

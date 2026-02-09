@@ -1,8 +1,4 @@
 class CeilingFan {
-  CeilingFan(){
-    
-  }
-
   public on(){
     console.log(`Ceiling on`);
   }

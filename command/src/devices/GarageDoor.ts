@@ -1,14 +1,10 @@
 class GarageDoor {
-  private description: string | undefined;
+  constructor(){}
 
-  GarageDoor(description: string){
-    this.description = description;
-  }
-
-  public on(){
+  public open(){
     console.log(`GarageDoor open`);
   }
-  public off(){
+  public close(){
     console.log(`GarageDoor closed`);
   }
 }

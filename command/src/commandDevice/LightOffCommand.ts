@@ -2,14 +2,15 @@ import Light from "../devices/Light";
 import { Command } from "../interfaces/Command";
 
 class LightOffCommand implements Command{
-  private light!: Light;
+  constructor(
+    private light: Light
+  ){}
 
-  LightOffCommand(light: Light){
-    this.light = light;
-  }
-
-  execute(): void {
+  public execute(): void {
     this.light.off();
+  }
+  public undo():void{
+    this.light.on();
   }
 }
 

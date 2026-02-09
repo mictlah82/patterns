@@ -2,14 +2,15 @@ import CeilingFan from "../devices/CeilingFan";
 import { Command } from "../interfaces/Command";
 
 class CeilingFanOffCommand implements Command{
-  private ceilingFan!: CeilingFan;
+  constructor(
+    private ceilingFan: CeilingFan
+  ){}
 
-  CeilingFanOffCommand(ceilingFan: CeilingFan){
-    this.ceilingFan = ceilingFan;
-  }
-
-  execute(): void {
+  public execute(): void {
     this.ceilingFan.off();    
+  }
+  public undo():void{
+    this.ceilingFan.on();
   }
 
 }

@@ -1,8 +1,11 @@
 import { Command } from "../interfaces/Command";
 
 class NoCommand implements Command{
-  execute(): void {
-    
+  public execute(): void {
+    console.log('No command.');    
+  }
+  public undo():void{
+    console.log('No command.');
   }
 }
 
