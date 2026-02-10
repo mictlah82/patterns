@@ -10,12 +10,9 @@ class HouseBlend extends Beverage {
   public cost(): number {
     let cost = 0;
     switch (this.getSize()) {
-      case 'small':
-        cost = 0.99;
-      case 'medium':
-        cost = 1.09;
-      case 'large':
-        cost = 1.19;
+      case 'small':  cost = 0.99; break;
+      case 'medium': cost = 1.09; break;
+      case 'large': cost = 1.19;
     }
     return cost;
 

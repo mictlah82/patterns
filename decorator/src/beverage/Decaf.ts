@@ -10,12 +10,9 @@ class Decaf extends Beverage {
   public cost(): number {
     let cost = 0;
     switch (this.getSize()) {
-      case 'small':
-        cost = 0.95;
-      case 'medium':
-        cost = 1.05;
-      case 'large':
-        cost = 1.15;
+      case 'small': cost = 0.95; break;
+      case 'medium': cost = 1.05; break;
+      case 'large': cost = 1.15;
     }
     return cost;
   }

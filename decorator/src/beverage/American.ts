@@ -10,12 +10,9 @@ class American extends Beverage {
   cost(): number {
     let cost=0;
     switch (this.getSize()) {
-      case 'small':
-        cost = 1.99;
-      case 'medium':
-        cost = 1.09;
-      case 'large':
-        cost = 1.19;
+      case 'small': cost = 1.99; break;
+      case 'medium': cost = 1.09; break;
+      case 'large': cost = 1.19;
     }
     return cost;
   }

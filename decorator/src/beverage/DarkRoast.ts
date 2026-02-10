@@ -10,12 +10,9 @@ class DarkRoast extends Beverage {
   public cost():number {
     let cost=0;
     switch (this.getSize()) {
-      case 'small':
-        cost = 0.89;
-      case 'medium':
-        cost = 1.99;
-      case 'large':
-        cost = 1.09;
+      case 'small': cost = 0.89; break;
+      case 'medium': cost = 1.99; break;
+      case 'large': cost = 1.09;
     }
     return cost;
   }

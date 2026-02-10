@@ -10,12 +10,9 @@ class Espresso extends Beverage {
   public cost(): number {
     let  cost = 0;
     switch (this.getSize()) {
-      case 'small':
-        cost = 0.91;
-      case 'medium':
-        cost = 1.01;
-      case 'large':
-        cost = 1.11;
+      case 'small': cost = 0.91; break;
+      case 'medium': cost = 1.01; break;
+      case 'large': cost = 1.11;
     }
     return cost;
   }
