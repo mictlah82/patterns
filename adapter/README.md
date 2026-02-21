@@ -1,5 +1,6 @@
 # Adapter Pattern — Duck and Turkey (TypeScript)
 
+## Intent
 Adapter pattern:converts the interface of a class into another interface the client expect. Adapters lets classes work together that couldn't otherwise because of incompatible interface.
 
 Structure:
