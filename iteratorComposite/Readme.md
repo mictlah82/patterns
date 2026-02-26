@@ -1,7 +1,9 @@
-# Iterator Pattern
+# Iterator & Composite Pattern
 
 ## Intent
-provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+Iterator: provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+Composite: Alows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
 ## Structure
 
@@ -17,11 +19,14 @@ The Iterator pattern typically involves:
 - **Collection**: Maintains elements and provides `createIterator()`
 
 ## Key Benefits
-
+### Iterator
 - Decouples collection structure from traversal logic
 - Supports multiple simultaneous iterations over the same collection
 - Simplifies the collection interface by moving traversal responsibility
 - Enables different iteration strategies without modifying the collection
+### Composite
+- Allows us to build structures of objects in the form of trees that contain both composite objects and individual objects as nodes.
+- Can apply the same operations over both composites and individual objects.
 
 ## JavaScript Example
 
