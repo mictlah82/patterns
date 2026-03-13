@@ -3,7 +3,7 @@
 ## Intent
 Iterator: provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
-Composite: Alows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+Composite: Allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 
 ## Structure
 

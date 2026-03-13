@@ -17,11 +17,10 @@ export class HasQuarterState implements State {
     const winner = Math.random()*100;
     if (winner <= 10){
       this.gumballMachine.setState(this.gumballMachine.getWinnerState());
-      this.gumballMachine.dispense();
     }else{
       this.gumballMachine.setState(this.gumballMachine.getSoldState());
-      this.gumballMachine.dispense();
     }
+    this.gumballMachine.dispense();
   }
   public dispense(): void {
     console.log('Operation not available.');

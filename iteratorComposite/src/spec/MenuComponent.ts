@@ -5,9 +5,6 @@ export abstract class MenuComponent {
   public remove(menuComponent: MenuComponent):void{
     throw new Error("Unsupported Operation");
   }
-  public getChild(indx: number):MenuComponent{
-    throw new Error("Unsupported Operation");
-  }
   public getName():string{
     throw new Error("Unsupported Operation");
   }
@@ -23,5 +20,7 @@ export abstract class MenuComponent {
   public print():void{
     throw new Error("Unsupported Operation");
   }
-
+  public getChild(inx: number):MenuComponent{
+    throw new Error("Unsupported Operation");
+  }
 }

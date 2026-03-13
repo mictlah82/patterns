@@ -2,7 +2,6 @@ import { MenuComponent } from "./spec/MenuComponent";
 
 export class Menu extends MenuComponent{
   private menuComponents:Array<MenuComponent> = new Array();
-  private iterator:Iterator<any>|null = null;
 
   constructor(
     private name:string,
