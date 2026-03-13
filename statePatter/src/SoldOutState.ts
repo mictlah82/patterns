@@ -20,5 +20,6 @@ export class SoldOutState implements State {
 	}
 	public refill(numberGumballs: number):void{
 		this.gumballMachine.putGumballs(numberGumballs);
+		this.gumballMachine.setState(this.gumballMachine.getNoQuarterState());
 	}
 }
