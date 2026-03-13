@@ -18,5 +18,7 @@ export class SoldOutState implements State {
 	public dispense(): void {
 		console.log('Operation not available.');
 	}
-
+	public refill(numberGumballs: number):void{
+		this.gumballMachine.putGumballs(numberGumballs);
+	}
 }

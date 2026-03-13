@@ -3,4 +3,5 @@ export interface State {
     ejectQuarter():void;
     turnCrack():void;
     dispense():void;
+    refill(numberGumballs: number):void;
 }

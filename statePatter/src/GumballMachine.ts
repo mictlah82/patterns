@@ -68,6 +68,9 @@ export class GumballMachine {
 	public dispense():void{
 		this.state.dispense();
 	}
+	public refill(gumballs: number){
+		this.state.refill(gumballs);
+	}
 
 	public setState(state: State):void{
 		this.state = state;

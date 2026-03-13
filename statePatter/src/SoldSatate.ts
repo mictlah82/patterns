@@ -24,4 +24,7 @@ export class SoldState implements State {
       this.gumballMachine.setState(this.gumballMachine.getSoldOutState());
     }
   }
+  public refill(n:number): void {
+    console.log('returning quarter.');
+  }
 }

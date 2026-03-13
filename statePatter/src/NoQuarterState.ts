@@ -19,4 +19,7 @@ export class NoQuarterState implements State {
   public dispense(): void {
     console.log('Operation not available.');
   }
+  public refill(n:number): void {
+    console.log('returning quarter.');
+  }
 }
